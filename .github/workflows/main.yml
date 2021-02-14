@@ -20,7 +20,7 @@ jobs:
     name: checkout repository
     steps:
     - uses: actions/checkout@v2
-      name: Check out repository
+    - name: Check out repository
 
   install:
     needs: checkout
@@ -28,11 +28,11 @@ jobs:
     name: set up Node.js
     steps:
     - uses: actions/setup-node@v1
-      name: Set up Node.js
+    - name: Set up Node.js
       with:
         node-version: 10.23.2
     - uses: borales/actions-yarn@v2.0.0
-      name: Run yarn install
+    - name: Run yarn install
       with:
         cmd: install # will run `yarn install` command
    
@@ -42,13 +42,15 @@ jobs:
     name: Run ESLint
     steps:
     - name: Run ESLint
-    - run:
+      run:
         npm run lint     
   test:
+  
     # This job contains test called "test"
     needs: lint
     runs-on: ubuntu-latest
     name: test
     steps:
-    - run:
+    - name: Run tests
+      run:
         npm test
