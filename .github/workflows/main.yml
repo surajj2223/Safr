@@ -27,6 +27,6 @@ jobs:
       name: Set up Node.js
       with:
         node-version: 10.23.2
-    run:
-      npm test
+    - run:
+        npm test
  
