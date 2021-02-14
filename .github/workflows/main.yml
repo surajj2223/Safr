@@ -27,6 +27,11 @@ jobs:
       name: Set up Node.js
       with:
         node-version: 10.23.2
+
+    - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
+          
     - run:
         npm test
  
