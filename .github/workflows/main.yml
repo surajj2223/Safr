@@ -15,42 +15,27 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  checkout:
+  test:
     runs-on: ubuntu-latest
-    name: checkout repository
+    name: Run Lint & Tests
     steps:
     - uses: actions/checkout@v2
       name: Check out repository
 
-  install:
-    needs: checkout
-    runs-on: ubuntu-latest
-    name: set up Node.js
-    steps:
     - uses: actions/setup-node@v1
       name: Set up Node.js
       with:
         node-version: 10.23.2
+
     - uses: borales/actions-yarn@v2.0.0
       name: Run yarn install
       with:
         cmd: install # will run `yarn install` command
-   
-  lint: 
-    needs: install
-    runs-on: ubuntu-latest
-    name: Run ESLint
-    steps:
+
     - name: Run ESLint
       run:
-        npm run lint
+        npm run lint 
 
-  test:
-    # This job contains test called "test"
-    needs: lint
-    runs-on: ubuntu-latest
-    name: test
-    steps:
     - name: Run tests
       run:
         npm test
