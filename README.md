@@ -14,7 +14,7 @@
 - Secure, open Source & User friendly.
 - Based on Material Design guidelines.
 - Available on both iOS & Android [Coming soon]
-- Multilingual support with हिन्दी & English.   <img src="readme-icons/language.png"  width="6%" height="6%"></img>
+- Multilingual support with हिन्दी & English.
 - Supports Dark mode. 🌙
 - No ads.
 
