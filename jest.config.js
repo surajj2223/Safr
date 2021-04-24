@@ -11,11 +11,15 @@ module.exports = {
   },
   testPathIgnorePatterns: ['./node_modules/'],
   coverageDirectory: 'coverage',
-  coverageReporters: ['json', 'text', 'html'],
+  coverageReporters: ['json', 'text', 'html', 'cobertura', 'text-summary'],
   transformIgnorePatterns: [ignore],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.{js,jsx,ts,tsx}',
+    '!src/**/*.style.{js,ts}',
+    '!*.{tsx,js,ts,jsx}',
     '!node_modules/**',
+    '!*.config.{js,ts}',
   ],
+  setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
 };
