@@ -1,4 +1,10 @@
 import React from 'react';
-import { Container } from './Navigation.style';
+import { Container, ThemedText } from './Navigation.style';
 
-export default () => <Container />;
+export default () => {
+  return (
+    <Container>
+      <ThemedText>Hi there!</ThemedText>
+    </Container>
+  );
+};

@@ -1,4 +1,4 @@
 export default {
-  primaryColor: '#ffffff',
-  ascentColor: '#000',
+  primaryColor: '#000',
+  ascentColor: '#fff',
 };
