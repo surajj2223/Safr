@@ -6,12 +6,27 @@ exports[`App Container should match snapshot 1`] = `
   style={
     Array [
       Object {
+        "alignItems": "center",
         "backgroundColor": "#67AC90",
         "flexBasis": 0,
         "flexGrow": 1,
         "flexShrink": 1,
+        "justifyContent": "center",
       },
     ]
   }
-/>
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 16,
+        },
+      ]
+    }
+  >
+    Hi there!
+  </Text>
+</RCTSafeAreaView>
 `;
